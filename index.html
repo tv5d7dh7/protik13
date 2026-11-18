@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inkpin – A Printed-Style Atlas of Coastlines for Travel Video</title>
+<meta name="description" content="Eight coastlines drawn as two-color prints, with shot ideas, light and season for travel TikTok creators and tour operators.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f0e3;--card:#fffaf0;--ink:#1b1b2f;--muted:#55556f;--pink:#ff5a8a;--teal:#12a3a3;--yel:#ffd23f;--sea:#f3ead8;--line:#d9ccb2;--blend:multiply;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14131f;--card:#1d1c2e;--ink:#f7f0e3;--muted:#b4b2cc;--pink:#ff6f9a;--teal:#36d0c9;--sea:#1b1a2c;--line:#34324d;--blend:normal;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14131f;--card:#1d1c2e;--ink:#f7f0e3;--muted:#b4b2cc;--pink:#ff6f9a;--teal:#36d0c9;--sea:#1b1a2c;--line:#34324d;--blend:normal;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Schibsted Grotesk",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bagel Fat One","Schibsted Grotesk",sans-serif;font-weight:400;margin:0;line-height:1.05;letter-spacing:.005em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:22px 0}
+.logo{font:400 1.7rem "Bagel Fat One",sans-serif;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--pink);border:3px solid var(--ink);display:block;box-shadow:3px 3px 0 var(--teal)}
+.top nav{display:flex;gap:6px;flex-wrap:wrap}
+.top nav a{text-decoration:none;font-weight:700;padding:7px 14px;border-radius:999px}
+.top nav a:hover{background:var(--yel);color:#1b1b2f}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);border:3px solid var(--ink);border-radius:14px;padding:13px 26px;font:700 1rem "Schibsted Grotesk",sans-serif;text-decoration:none;cursor:pointer;box-shadow:4px 4px 0 var(--pink);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--pink)}
+.btn.o{background:var(--card);color:var(--ink);box-shadow:4px 4px 0 var(--teal)}
+.btn.o:hover{box-shadow:2px 2px 0 var(--teal)}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.hero{padding:40px 0 60px;position:relative}
+.hero h1{font-size:clamp(2.8rem,8vw,6.4rem);max-width:10em;text-shadow:4px 4px 0 var(--teal);mix-blend-mode:normal}
+.hero h1 em{font-style:normal;color:var(--pink);text-shadow:4px 4px 0 var(--ink)}
+.hero p{font-size:1.2rem;color:var(--muted);max-width:33em;margin:24px 0 30px}
+.dots{position:absolute;right:-30px;top:20px;width:340px;height:340px;border-radius:50%;background:radial-gradient(var(--pink) 28%,transparent 30%) 0 0/16px 16px;opacity:.5;mask-image:radial-gradient(circle,#000 40%,transparent 72%);-webkit-mask-image:radial-gradient(circle,#000 40%,transparent 72%);pointer-events:none}
+section{padding:50px 0 10px}
+.h{max-width:38em;margin-bottom:28px}
+.h h2{font-size:clamp(2rem,4.8vw,3.4rem)}
+.h p{color:var(--muted);margin:12px 0 0}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:215px;gap:16px;grid-auto-flow:dense}
+.tile{position:relative;border:3px solid var(--ink);border-radius:22px;overflow:hidden;padding:0;cursor:pointer;background:var(--sea);box-shadow:5px 5px 0 var(--ink);text-align:left;color:var(--ink);font:inherit;transition:transform .15s,box-shadow .15s}
+.tile:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--pink)}
+.tile.big{grid-column:span 2;grid-row:span 2}
+.tile.wide{grid-column:span 2}
+.tile.tall{grid-row:span 2}
+.m{position:absolute;inset:0}
+.m svg{display:block;width:100%;height:100%}
+.m .dt{opacity:.4}
+.m pattern circle{fill:var(--teal)}
+.m .sh{fill:var(--teal);opacity:.14}
+.m .lt{fill:var(--teal)}
+.m .lp{fill:var(--pink);mix-blend-mode:var(--blend)}
+.m .lo{fill:none;stroke:var(--ink);stroke-width:1.4;stroke-linejoin:round}
+.m .pn1{fill:var(--yel);stroke:var(--ink);stroke-width:2.5}
+.m .pn2{fill:var(--ink)}
+.nm{position:absolute;left:12px;bottom:12px;right:12px;font:400 clamp(1.15rem,2.2vw,1.7rem) "Bagel Fat One",sans-serif;line-height:1.05;background:var(--card);border:3px solid var(--ink);border-radius:12px;padding:7px 12px;width:fit-content;max-width:calc(100% - 24px)}
+.rg{position:absolute;left:12px;top:12px;background:var(--yel);color:#1b1b2f;border:2px solid var(--ink);border-radius:999px;padding:1px 11px;font-size:.78rem;font-weight:700}
+.pl{position:absolute;right:12px;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:700 1.3rem/1 "Schibsted Grotesk",sans-serif}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.note{background:var(--card);border:3px solid var(--ink);border-radius:22px;padding:26px;box-shadow:5px 5px 0 var(--teal)}
+.note:nth-child(2){box-shadow:5px 5px 0 var(--pink)}
+.note:nth-child(3){box-shadow:5px 5px 0 var(--yel)}
+.note b{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--bg);font:400 1.2rem "Bagel Fat One",sans-serif;margin-bottom:12px}
+.note h3{font-size:1.45rem;margin-bottom:6px}
+.note h3 mark{background:linear-gradient(transparent 55%,var(--yel) 55%);color:inherit}
+.note p{margin:0;color:var(--muted)}
+.ops{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;align-items:start}
+.ops .yc{background:var(--yel);color:#1b1b2f;border:3px solid var(--ink);border-radius:26px;padding:34px;box-shadow:6px 6px 0 var(--ink)}
+.ops .yc h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:12px}
+.ops .yc p{margin:0}
+.ops ul{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+.ops li{background:var(--card);border:3px solid var(--ink);border-radius:18px;padding:16px 20px}
+.ops li b{display:block;font:400 1.25rem "Bagel Fat One",sans-serif}
+.ops li span{color:var(--muted)}
+.cta{margin-top:30px;background:var(--pink);color:#1b1b2f;border:3px solid var(--ink);border-radius:30px;padding:60px 30px;text-align:center;box-shadow:7px 7px 0 var(--ink);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(#1b1b2f 22%,transparent 24%) 0 0/14px 14px;opacity:.1}
+.cta>*{position:relative}
+.cta h2{font-size:clamp(2rem,5vw,3.6rem)}
+.cta p{max-width:30em;margin:14px auto 26px}
+.cta .btn{background:#1b1b2f;color:#f7f0e3;box-shadow:4px 4px 0 var(--yel)}
+footer{margin-top:80px;border-top:3px solid var(--ink);padding:44px 0 40px;color:var(--muted);font-size:.95rem}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+footer h4{font:400 1.15rem "Bagel Fat One",sans-serif;color:var(--ink);margin:0 0 8px}
+footer a,footer .lnk{display:block;color:var(--muted);text-decoration:none;background:none;border:0;padding:3px 0;font:inherit;cursor:pointer;text-align:left}
+footer a:hover,footer .lnk:hover{color:var(--ink);text-decoration:underline}
+address{font-style:normal}
+.fine{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:.82rem}
+dialog{border:3px solid var(--ink);border-radius:24px;max-width:680px;width:calc(100% - 28px);padding:0;background:var(--card);color:var(--ink);box-shadow:8px 8px 0 var(--pink)}
+dialog::backdrop{background:rgba(20,18,40,.65)}
+.dlg{padding:26px 28px;max-height:84vh;overflow:auto}
+.dlg h2{font-size:1.9rem;margin-bottom:4px}
+.dlg h3{font-size:1.15rem;margin:18px 0 4px}
+.dlg p{color:var(--muted);font-size:.95rem;margin:4px 0}
+.dlg table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:8px}
+.dlg th,.dlg td{text-align:left;border-bottom:2px solid var(--line);padding:7px 6px;color:var(--muted);vertical-align:top}
+.dlg th{color:var(--ink)}
+.dm{position:relative;aspect-ratio:2/1;border:3px solid var(--ink);border-radius:16px;overflow:hidden;background:var(--sea);margin-bottom:16px}
+.sp .reg2{color:var(--pink);font-weight:700;margin-bottom:8px}
+.sp dl{margin:12px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;border-top:2px solid var(--line);padding-top:12px;font-size:.95rem}
+.sp dt{font-weight:700}.sp dd{margin:0;color:var(--muted)}
+#cc .dlg{padding:30px}
+#cc h2{font-size:2rem}
+#cc p{font-size:.97rem;color:var(--muted)}
+#cc .lk{display:inline;background:none;border:0;padding:0;font:inherit;text-decoration:underline;cursor:pointer;color:var(--pink);font-weight:700}
+#cc .row{margin-top:18px;gap:10px}
+#cc .btn{padding:11px 20px;font-size:.95rem}
+.prefs{display:none;margin-top:12px}
+.prefs.open{display:block}
+.prefs label{display:flex;gap:10px;padding:9px 0;border-top:2px solid var(--line);font-size:.93rem;color:var(--muted)}
+.prefs b{color:var(--ink)}
+.prefs input{margin-top:4px;width:19px;height:19px;accent-color:#ff5a8a}
+@media (max-width:900px){.bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:185px}.ops,.fg{grid-template-columns:1fr}.dots{display:none}.top nav a:not(.keep){display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.tile{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#top"><i></i>Inkpin</a>
+    <nav><a href="#atlas">Atlas</a><a href="#notes">Field notes</a><a href="#operators">For operators</a><a class="keep" href="#contact" style="background:var(--yel);color:#1b1b2f">Say hi</a></nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="dots" aria-hidden="true"></div>
+      <h1>Pin the places that make people <em>press play</em>.</h1>
+      <p>Inkpin is a printed-style atlas of eight coastlines that look incredible in vertical video. Tap any tile for the shot idea, the light and the best season. Made for travel creators and tour operators.</p>
+      <div class="row"><a class="btn" href="#atlas">Open the atlas</a><a class="btn o" href="#operators">For operators</a></div>
+    </div>
+
+    <section id="atlas" style="padding-top:10px">
+      <div class="h"><h2>Eight pins, eight stories</h2><p>Every tile is a real piece of coastline, printed in two colors. Tap one to see the details.</p></div>
+      <div class="bento" id="bento"></div>
+    </section>
+
+    <section id="notes">
+      <div class="h"><h2>Field notes</h2><p>Three habits that make coastal clips feel effortless.</p></div>
+      <div class="notes">
+        <div class="note"><b>1</b><h3>Find the <mark>right light</mark></h3><p>Sunrise and late afternoon make water glow. At midday, shoot in clear shallows where the color does the work.</p></div>
+        <div class="note"><b>2</b><h3>Open with <mark>motion</mark></h3><p>A wave, a boat or a step into frame. Keep the subject centered in 9:16 and leave room for captions.</p></div>
+        <div class="note"><b>3</b><h3>Respect the <mark>shore</mark></h3><p>Keep your distance from wildlife, stay off dunes and reefs and check local drone and access rules first.</p></div>
+      </div>
+    </section>
+
+    <section id="operators">
+      <div class="ops">
+        <div class="yc"><h2>For tour operators and tourism boards</h2><p>We help coastal destinations turn their best viewpoints into videos people save and share. Pick the service that fits your season.</p></div>
+        <ul>
+          <li><b>Shore scouting</b><span>Light, tide and crowd timing with access notes, delivered as one-page location briefs.</span></li>
+          <li><b>Creator trips</b><span>Hosted itineraries built for filming, with clear deliverables and every partnership disclosed.</span></li>
+          <li><b>Guide workshops</b><span>Short phone-filming sessions for guides and skippers: hooks, framing and captions.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="cta"><h2>Got a coastline to pin?</h2><p>Tell us the place and the season. We reply within two business days.</p><a class="btn" href="mailto:hello@inkpin.example">Email Inkpin</a></div>
+    </section>
+  </main>
+</div>
+
+<footer><div class="wrap">
+  <div class="fg">
+    <div><a class="logo" href="#top"><i></i>Inkpin</a>
+      <address style="margin-top:12px">Inkpin Studio B.V.<br>Havenstraat 112<br>1013 AB Amsterdam, Netherlands<br>KvK 12345678<br>hello@inkpin.example · +31 20 555 0149</address></div>
+    <div><h4>Explore</h4><a href="#atlas">Atlas</a><a href="#notes">Field notes</a><a href="#operators">For operators</a><a href="#contact">Contact</a></div>
+    <div><h4>Legal</h4><button class="lnk" data-open="privacy">Privacy Policy</button><button class="lnk" data-open="cookies">Cookie Policy</button><button class="lnk" data-open="terms">Terms of Use</button><button class="lnk" id="cc-reopen">Cookie settings</button></div>
+  </div>
+  <p class="fine">© 2026 Inkpin Studio B.V. Maps are drawn from public-domain Natural Earth data. Coordinates are approximate and for inspiration only, not for navigation. Check local rules, drone laws and permits before filming. TikTok is a trademark of its owner; Inkpin is not affiliated with or endorsed by TikTok.</p>
+</div></footer>
+
+<dialog id="spot"><div class="dlg sp"><button class="btn o" data-close style="float:right;padding:6px 16px;box-shadow:3px 3px 0 var(--teal)">Close</button><div id="spb"></div></div></dialog>
+
+<dialog id="cc" aria-labelledby="cc-t"><div class="dlg">
+  <h2 id="cc-t">Cookies, your choice</h2>
+  <p>We use essential cookies to run this site. With your consent we also use analytics and advertising cookies, including Google’s, to see what works and show relevant content. You can change your mind at any time. Closing this window with Esc keeps non-essential cookies off. Read the <button class="lk" data-open="cookies">Cookie Policy</button>.</p>
+  <div class="prefs" id="prefs">
+    <label><input type="checkbox" checked disabled><span><b>Necessary.</b> Security and remembering your choice. Always on.</span></label>
+    <label><input type="checkbox" id="c-an"><span><b>Analytics.</b> Aggregated visit statistics, e.g. Google Analytics.</span></label>
+    <label><input type="checkbox" id="c-ad"><span><b>Advertising.</b> Ad measurement and personalization, e.g. Google Ads.</span></label>
+  </div>
+  <div class="row">
+    <button class="btn" id="cc-all">Accept all</button>
+    <button class="btn o" id="cc-none">Reject non-essential</button>
+    <button class="btn o" id="cc-cust">Customize</button>
+    <button class="btn" id="cc-save" style="display:none">Save choices</button>
+  </div>
+</div></dialog>
+
+<dialog id="privacy"><div class="dlg"><button class="btn o" data-close style="float:right;padding:6px 16px;box-shadow:3px 3px 0 var(--teal)">Close</button><h2>Privacy Policy</h2><p>Last updated: November 17, 2026</p>
+<h3>Who we are</h3><p>Inkpin Studio B.V., Havenstraat 112, 1013 AB Amsterdam, Netherlands (KvK 12345678), is the controller of personal data processed through this site. Contact: hello@inkpin.example.</p>
+<h3>What we collect</h3><p>Details you send by email (name, email address, message) and, only with your consent, cookie data such as pages viewed, approximate location, device and browser type.</p>
+<h3>Why we use it</h3><p>To reply to you (legitimate interest), to improve the site (consent for analytics) and to measure advertising (consent).</p>
+<h3>Google services</h3><p>If you accept analytics or advertising cookies, Google may process data under its own policies; see policies.google.com/technologies/partner-sites. Google Consent Mode keeps storage denied until you choose.</p>
+<h3>Retention and sharing</h3><p>Enquiry emails are kept up to 24 months. We share data only with service providers acting for us, such as email and analytics tools, or when the law requires. We do not sell personal information.</p>
+<h3>Your rights</h3><p>Under the GDPR you can access, correct, delete or port your data, restrict or object to processing, withdraw consent anytime and complain to the Dutch Data Protection Authority (Autoriteit Persoonsgegevens) or your local regulator.</p>
+<h3>Children</h3><p>This site is not directed at children under 16.</p></div></dialog>
+
+<dialog id="cookies"><div class="dlg"><button class="btn o" data-close style="float:right;padding:6px 16px;box-shadow:3px 3px 0 var(--teal)">Close</button><h2>Cookie Policy</h2><p>Last updated: November 17, 2026</p>
+<p>Cookies and similar tools such as local storage are small files kept on your device. We ask for consent before using any that are not strictly necessary, and rejecting is as easy as accepting.</p>
+<table><tr><th>Category</th><th>Purpose</th><th>Duration</th></tr>
+<tr><td>Necessary</td><td>Stores your choice (inkpin_consent)</td><td>12 months</td></tr>
+<tr><td>Analytics</td><td>Measures visits, e.g. Google Analytics (_ga, _ga_*)</td><td>Up to 24 months</td></tr>
+<tr><td>Advertising</td><td>Ad measurement, e.g. Google Ads (_gcl_*, IDE)</td><td>Up to 13 months</td></tr></table>
+<h3>Change your mind</h3><p>Use “Cookie settings” in the footer at any time, or block and delete cookies in your browser settings.</p>
+<h3>Consent signals</h3><p>Where Google tags are used, your choice is passed through Google Consent Mode (analytics_storage, ad_storage, ad_user_data and ad_personalization default to denied).</p></div></dialog>
+
+<dialog id="terms"><div class="dlg"><button class="btn o" data-close style="float:right;padding:6px 16px;box-shadow:3px 3px 0 var(--teal)">Close</button><h2>Terms of Use</h2><p>Last updated: November 17, 2026</p>
+<p>Content here is for general inspiration and is not a navigational aid. Conditions, access rules, drone regulations, tides and seasons change, so verify details with local authorities and providers before you travel or film.</p>
+<p>All text and design belong to Inkpin Studio B.V. and may not be copied without permission. We are not liable for loss arising from reliance on this information, except where the law does not allow us to exclude liability. These terms are governed by Dutch law.</p></div></dialog>
+
+<script>
+(function(){
+  var P=[["big", "Bonifacio", "Corsica, France", "Film the old town perched on white cliffs from a boat in the strait, then cut to a stair shot down to the harbour.", "41.39° N, 9.16° E", "Late afternoon", "May–Jun, Sep"], ["small", "Cala Macarella", "Menorca, Spain", "Walk down the pine-shaded path to reveal the pale cove, then drop to water level for a slow pan across the shallows.", "39.94° N, 3.94° E", "Early morning", "May–Jun, Sep"], ["tall", "Wineglass Bay", "Tasmania, Australia", "Climb to the lookout and frame the perfect crescent beach, then descend to the sand for a slow-motion walk.", "42.16° S, 148.30° E", "Morning", "Oct–Apr"], ["small", "Ses Illetes", "Formentera, Spain", "Shoot the sandbar where both sides of the sea meet, with a low angle that makes the water look endless.", "38.73° N, 1.43° E", "Late morning", "Jun, Sep"], ["wide", "Kerama Islands", "Okinawa, Japan", "Drop into clear blue shallows from the edge of the boat. Keep a respectful distance from sea turtles.", "26.23° N, 127.30° E", "Midday", "Apr–Oct"], ["tall", "Cabo de Gata", "Andalusia, Spain", "Dry volcanic cliffs and wild coves: start on a ridge trail and finish with a barefoot walk into the sea.", "36.75° N, 2.11° W", "Sunrise", "Apr–Jun, Oct"], ["tall", "Le Morne", "Mauritius", "Kitesurfers racing across the lagoon with the mountain behind them, then a quiet close-up of footprints on the sand.", "20.45° S, 57.31° E", "Afternoon", "Jun–Oct"], ["wide", "Santa Maria", "Sal, Cape Verde", "Start on the long pier at sunrise with fishermen at work, then cut to colorful boats and a wide ocean finish.", "16.60° N, 22.91° W", "Sunrise", "Nov–Jun"]];
+  var MAPS=["<svg viewBox=\"0 0 600 500\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-label=\"Map of the coast around Bonifacio\" xmlns=\"http://www.w3.org/2000/svg\"><defs><pattern id=\"d0\" width=\"7\" height=\"7\" patternUnits=\"userSpaceOnUse\"><circle cx=\"3.5\" cy=\"3.5\" r=\"1.3\"/></pattern></defs><rect class=\"dt\" width=\"600\" height=\"500\" fill=\"url(#d0)\"/><path class=\"sh\" d=\"M550.9 434.4L552.6 441.7L543.9 454.6L542.2 460.7L543.0 466.9L546.1 472.4L549.6 475.5L559.8 481.9L570.5 488.2L574.8 489.9L581.1 490.2L592.5 487.3L596.8 485.4L600.4 482.5L603.5 477.2L604.4 472.7L604.2 463.5L608.5 464.2L613.1 463.6L617.3 461.7L620.0 459.5L620.0 393.9L610.8 401.1L597.8 409.1L590.1 401.8L577.4 394.7L564.3 391.3L559.7 391.9L555.4 393.9L551.8 397.0L544.8 405.5L542.1 412.5L542.9 420.1L550.9 434.4ZM604.8 519.9L599.4 514.6L582.3 506.4L578.2 505.0L567.8 503.6L562.8 504.6L551.3 509.6L547.3 514.0L545.0 520.0L604.8 519.9ZM106.7 109.7L110.1 113.1L114.4 115.3L119.1 116.2L123.8 115.6L129.5 112.7L145.3 100.1L146.5 106.3L150.1 111.6L173.9 130.9L210.5 146.7L214.9 150.6L210.5 154.8L207.7 159.1L190.5 213.7L190.2 218.3L191.3 222.9L193.6 226.9L197.0 230.1L239.7 249.2L287.0 256.8L306.3 265.2L344.2 299.5L368.1 307.8L371.3 308.2L376.1 307.5L406.6 291.2L409.8 287.5L420.9 269.6L434.8 237.4L446.6 203.4L452.8 171.4L452.7 165.0L450.1 159.2L445.5 154.8L439.6 152.6L434.8 152.5L430.3 153.9L411.8 164.8L406.4 147.7L404.0 143.8L400.6 140.5L407.2 139.6L411.2 138.0L452.1 110.9L475.6 100.5L480.3 96.6L483.1 91.2L483.8 86.7L483.2 82.2L479.3 74.7L485.4 69.2L488.0 65.3L495.3 46.3L496.2 39.7L490.1 17.8L486.0 12.8L479.7 9.5L482.3 -8.9L481.2 -20.0L-20.0 -20.0L-20.0 58.5L-11.4 56.5L21.2 61.5L54.9 72.1L66.6 82.4L76.7 96.9L80.1 99.9L84.3 101.8L90.3 102.5L94.8 101.4L98.8 99.1L106.7 109.7ZM462.1 516.5L457.9 511.9L455.3 510.3L450.8 508.9L446.2 508.8L431.4 512.2L427.2 511.5L425.6 509.7L422.9 494.5L420.2 488.9L418.0 486.6L414.0 484.1L409.5 482.8L406.4 482.8L400.3 484.4L374.4 497.4L340.9 506.8L317.6 520.0L464.1 520.0L462.1 516.5ZM285.9 520.0L278.9 515.9L272.7 515.2L266.6 516.9L262.4 520.0L285.9 520.0ZM470.3 309.8L475.5 306.7L478.4 303.3L482.0 293.1L482.6 288.5L481.9 283.9L479.8 279.8L476.7 276.3L473.9 274.5L469.9 268.2L463.4 264.4L457.3 263.8L435.7 266.0L431.1 267.7L427.3 270.7L424.5 274.7L423.4 277.7L421.2 292.3L421.7 297.1L422.8 300.1L426.7 305.2L430.8 307.8L439.7 310.9L449.1 317.1L453.6 318.3L458.3 318.2L462.8 316.7L466.6 313.9L470.3 309.8ZM442.2 322.0L437.5 321.0L432.7 321.4L428.3 323.2L424.6 326.2L421.3 331.7L416.8 344.9L416.4 349.6L418.1 355.8L422.0 360.8L439.1 374.9L443.5 376.6L448.2 376.9L451.3 376.3L455.5 374.4L459.1 371.4L460.9 368.8L462.6 364.4L463.9 352.0L462.4 346.3L459.4 341.6L459.0 336.2L456.5 330.5L452.0 326.1L442.2 322.0Z\"/><path class=\"lt\" transform=\"translate(4 4)\" d=\"M410.6 516.9L407.5 498.7L380.1 512.4L352.7 520.0L413.4 520.0L410.6 516.9ZM587.5 446.6L564.0 452.8L558.2 461.9L578.6 474.4L588.5 471.8L587.5 446.6ZM436.4 336.9L432.4 348.6L446.9 360.9L447.9 353.0L443.5 346.8L443.4 339.6L436.4 336.9ZM456.7 298.6L459.3 296.8L464.9 294.8L466.6 288.8L458.1 291.3L458.8 279.7L438.9 281.7L437.2 293.1L447.4 296.8L455.5 302.4L456.7 298.6ZM-12.1 40.2L24.8 45.8L62.9 57.9L78.7 71.7L88.9 86.5L97.6 79.8L103.6 76.4L119.6 71.7L116.4 78.3L109.4 86.5L119.6 100.2L163.8 65.0L181.2 59.3L181.2 71.7L161.3 100.2L182.8 117.6L219.2 133.0L243.5 154.7L229.7 158.9L222.4 165.5L206.1 217.0L244.8 234.1L291.5 241.3L315.2 251.6L352.3 285.7L371.6 292.2L396.3 279.0L406.8 262.1L419.7 232.2L431.4 198.2L437.1 168.4L418.5 179.5L394.6 202.1L377.6 209.4L377.6 197.0L391.5 184.8L396.5 169.4L391.6 153.9L377.6 142.3L377.6 127.5L403.6 124.0L444.4 96.8L467.8 86.5L458.5 71.7L473.7 58.3L480.3 40.7L475.9 25.2L458.5 18.2L464.6 4.1L466.4 -9.6L465.1 -20.0L-20.0 -20.0L-20.0 42.1L-12.1 40.2ZM568.4 519.6L567.3 520.0L571.0 520.0L568.4 519.6ZM608.5 421.0L604.1 429.0L599.0 430.2L608.7 448.2L615.2 437.0L620.0 440.2L620.0 414.3L608.5 421.0ZM566.5 429.9L567.1 435.0L592.9 438.3L591.5 425.3L580.4 414.5L571.6 409.6L564.0 407.3L557.9 414.6L566.5 429.9Z\"/><path class=\"lp\" d=\"M410.6 516.9L407.5 498.7L380.1 512.4L352.7 520.0L413.4 520.0L410.6 516.9ZM587.5 446.6L564.0 452.8L558.2 461.9L578.6 474.4L588.5 471.8L587.5 446.6ZM436.4 336.9L432.4 348.6L446.9 360.9L447.9 353.0L443.5 346.8L443.4 339.6L436.4 336.9ZM456.7 298.6L459.3 296.8L464.9 294.8L466.6 288.8L458.1 291.3L458.8 279.7L438.9 281.7L437.2 293.1L447.4 296.8L455.5 302.4L456.7 298.6ZM-12.1 40.2L24.8 45.8L62.9 57.9L78.7 71.7L88.9 86.5L97.6 79.8L103.6 76.4L119.6 71.7L116.4 78.3L109.4 86.5L119.6 100.2L163.8 65.0L181.2 59.3L181.2 71.7L161.3 100.2L182.8 117.6L219.2 133.0L243.5 154.7L229.7 158.9L222.4 165.5L206.1 217.0L244.8 234.1L291.5 241.3L315.2 251.6L352.3 285.7L371.6 292.2L396.3 279.0L406.8 262.1L419.7 232.2L431.4 198.2L437.1 168.4L418.5 179.5L394.6 202.1L377.6 209.4L377.6 197.0L391.5 184.8L396.5 169.4L391.6 153.9L377.6 142.3L377.6 127.5L403.6 124.0L444.4 96.8L467.8 86.5L458.5 71.7L473.7 58.3L480.3 40.7L475.9 25.2L458.5 18.2L464.6 4.1L466.4 -9.6L465.1 -20.0L-20.0 -20.0L-20.0 42.1L-12.1 40.2ZM568.4 519.6L567.3 520.0L571.0 520.0L568.4 519.6ZM608.5 421.0L604.1 429.0L599.0 430.2L608.7 448.2L615.2 437.0L620.0 440.2L620.0 414.3L608.5 421.0ZM566.5 429.9L567.1 435.0L592.9 438.3L591.5 425.3L580.4 414.5L571.6 409.6L564.0 407.3L557.9 414.6L566.5 429.9Z\"/><path class=\"lo\" d=\"M410.6 516.9L407.5 498.7L380.1 512.4L352.7 520.0L413.4 520.0L410.6 516.9ZM587.5 446.6L564.0 452.8L558.2 461.9L578.6 474.4L588.5 471.8L587.5 446.6ZM436.4 336.9L432.4 348.6L446.9 360.9L447.9 353.0L443.5 346.8L443.4 339.6L436.4 336.9ZM456.7 298.6L459.3 296.8L464.9 294.8L466.6 288.8L458.1 291.3L458.8 279.7L438.9 281.7L437.2 293.1L447.4 296.8L455.5 302.4L456.7 298.6ZM-12.1 40.2L24.8 45.8L62.9 57.9L78.7 71.7L88.9 86.5L97.6 79.8L103.6 76.4L119.6 71.7L116.4 78.3L109.4 86.5L119.6 100.2L163.8 65.0L181.2 59.3L181.2 71.7L161.3 100.2L182.8 117.6L219.2 133.0L243.5 154.7L229.7 158.9L222.4 165.5L206.1 217.0L244.8 234.1L291.5 241.3L315.2 251.6L352.3 285.7L371.6 292.2L396.3 279.0L406.8 262.1L419.7 232.2L431.4 198.2L437.1 168.4L418.5 179.5L394.6 202.1L377.6 209.4L377.6 197.0L391.5 184.8L396.5 169.4L391.6 153.9L377.6 142.3L377.6 127.5L403.6 124.0L444.4 96.8L467.8 86.5L458.5 71.7L473.7 58.3L480.3 40.7L475.9 25.2L458.5 18.2L464.6 4.1L466.4 -9.6L465.1 -20.0L-20.0 -20.0L-20.0 42.1L-12.1 40.2ZM568.4 519.6L567.3 520.0L571.0 520.0L568.4 519.6ZM608.5 421.0L604.1 429.0L599.0 430.2L608.7 448.2L615.2 437.0L620.0 440.2L620.0 414.3L608.5 421.0ZM566.5 429.9L567.1 435.0L592.9 438.3L591.5 425.3L580.4 414.5L571.6 409.6L564.0 407.3L557.9 414.6L566.5 429.9Z\"/><circle class=\"pn1\" cx=\"300\" cy=\"250\" r=\"9\"/><circle class=\"pn2\" cx=\"300\" cy=\"250\" r=\"3\"/></svg>", "<svg viewBox=\"0 0 300 240\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-label=\"Map of the coast around Cala Macarella\" xmlns=\"http://www.w3.org/2000/svg\"><defs><pattern id=\"d1\" width=\"7\" height=\"7\" patternUnits=\"userSpaceOnUse\"><circle cx=\"3.5\" cy=\"3.5\" r=\"1.3\"/></pattern></defs><rect class=\"dt\" width=\"300\" height=\"240\" fill=\"url(#d1)\"/><path class=\"sh\" d=\"M12.0 42.6L8.5 47.0L6.8 51.6L2.2 75.3L1.1 99.6L-4.6 121.4L-4.2 126.2L-2.4 130.6L0.6 134.3L4.6 136.9L56.9 155.6L62.5 156.5L158.3 137.3L206.3 138.4L246.3 154.4L320.0 203.2L320.0 -20.0L-20.0 -20.0L-20.0 25.0L-8.1 35.0L12.0 42.6Z\"/><path class=\"lt\" transform=\"translate(4 4)\" d=\"M-11.9 10.8L0.1 21.2L26.8 31.0L37.5 40.5L22.5 54.7L18.0 77.3L17.0 102.0L11.4 122.5L62.2 140.5L156.9 121.3L209.5 122.5L253.8 140.1L320.0 184.0L320.0 -20.0L-20.0 -20.0L-20.0 -2.5L-11.9 10.8Z\"/><path class=\"lp\" d=\"M-11.9 10.8L0.1 21.2L26.8 31.0L37.5 40.5L22.5 54.7L18.0 77.3L17.0 102.0L11.4 122.5L62.2 140.5L156.9 121.3L209.5 122.5L253.8 140.1L320.0 184.0L320.0 -20.0L-20.0 -20.0L-20.0 -2.5L-11.9 10.8Z\"/><path class=\"lo\" d=\"M-11.9 10.8L0.1 21.2L26.8 31.0L37.5 40.5L22.5 54.7L18.0 77.3L17.0 102.0L11.4 122.5L62.2 140.5L156.9 121.3L209.5 122.5L253.8 140.1L320.0 184.0L320.0 -20.0L-20.0 -20.0L-20.0 -2.5L-11.9 10.8Z\"/><circle class=\"pn1\" cx=\"150\" cy=\"120\" r=\"9\"/><circle class=\"pn2\" cx=\"150\" cy=\"120\" r=\"3\"/></svg>", "<svg viewBox=\"0 0 300 470\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-label=\"Map of the coast around Wineglass Bay\" xmlns=\"http://www.w3.org/2000/svg\"><defs><pattern id=\"d2\" width=\"7\" height=\"7\" patternUnits=\"userSpaceOnUse\"><circle cx=\"3.5\" cy=\"3.5\" r=\"1.3\"/></pattern></defs><rect class=\"dt\" width=\"300\" height=\"470\" fill=\"url(#d2)\"/><path class=\"sh\" d=\"M112.5 188.7L116.5 192.1L135.9 201.5L140.0 202.8L144.9 203.0L141.2 206.4L112.0 223.0L108.1 228.0L106.5 234.1L107.3 240.3L109.4 244.5L112.8 247.9L121.4 254.5L131.0 264.7L138.5 274.7L139.7 277.6L138.0 286.1L132.6 295.8L125.2 306.4L119.4 318.0L100.7 330.4L96.7 335.1L95.1 339.5L92.3 352.6L92.8 359.0L95.8 364.6L102.5 372.7L105.8 375.8L109.9 377.8L136.8 386.3L148.0 402.4L151.2 405.8L166.0 414.8L170.7 415.7L175.3 415.4L181.0 412.8L184.4 409.5L186.7 405.3L191.3 393.0L193.9 388.6L212.9 366.8L218.0 357.4L219.6 353.1L230.0 300.5L226.0 270.5L223.2 264.6L219.6 261.1L216.8 259.5L184.0 245.4L184.3 243.4L209.1 207.6L216.8 198.8L223.7 194.3L227.0 190.7L229.4 184.7L229.5 174.2L228.3 168.4L226.0 164.6L165.4 88.8L166.3 30.1L175.5 -20.0L-20.0 -20.0L-20.0 165.5L68.5 167.8L73.1 166.8L78.3 163.5L81.9 158.5L83.3 153.3L112.5 188.7ZM19.1 63.3L13.5 41.4L13.6 33.4L16.1 31.4L17.6 31.9L27.0 40.7L31.3 43.1L36.1 44.1L46.7 43.5L51.3 42.0L54.0 40.3L58.2 35.4L59.9 30.9L61.6 14.2L76.4 23.1L76.1 32.8L69.1 48.6L63.0 53.9L48.2 58.7L30.8 68.9L20.7 77.8L19.1 63.3ZM180.4 440.2L175.7 435.3L156.2 422.6L121.3 409.6L117.3 408.7L96.7 406.7L91.0 407.7L75.5 413.5L71.4 415.8L67.2 420.4L65.2 426.3L65.1 429.4L66.0 433.9L78.5 460.5L88.1 472.8L94.3 476.6L122.9 483.5L131.0 490.0L202.7 490.0L195.0 472.1L189.4 455.0L180.4 440.2Z\"/><path class=\"lt\" transform=\"translate(4 4)\" d=\"M180.0 477.7L174.6 461.1L166.8 448.6L149.0 436.8L115.8 424.6L96.6 422.7L81.0 428.5L92.9 453.7L99.4 461.4L130.1 468.7L142.8 479.0L153.3 490.0L185.3 490.0L180.0 477.7ZM61.6 -4.5L92.7 14.2L92.0 36.4L82.3 58.3L70.8 68.3L56.2 72.5L40.2 81.9L13.1 105.9L76.9 127.6L94.6 141.8L124.9 178.5L142.8 187.0L170.0 186.8L163.9 207.3L150.6 219.5L122.4 235.2L132.1 242.5L143.3 254.3L152.5 266.7L156.4 276.0L153.2 291.7L146.2 304.4L139.1 314.2L136.0 321.8L131.1 329.5L110.7 342.8L108.2 354.4L114.8 362.5L149.0 373.4L151.3 379.6L161.0 393.1L171.7 399.8L176.8 386.0L180.9 379.1L199.7 357.7L203.9 349.8L214.0 300.9L210.4 274.2L165.9 255.0L169.3 237.1L196.5 197.7L206.2 186.6L213.7 181.8L213.5 174.5L149.3 94.3L150.3 28.5L159.3 -20.0L56.7 -20.0L61.6 -4.5ZM67.4 151.8L18.6 138.9L5.7 133.5L-2.3 128.0L-7.9 122.4L-17.9 109.6L-19.1 100.9L-10.6 95.0L0.1 90.9L5.7 87.7L3.2 65.0L-2.6 43.4L-2.3 25.5L13.1 13.5L26.1 17.8L36.8 28.1L44.2 27.7L47.0 -0.8L37.4 -20.0L-20.0 -20.0L-20.0 149.5L67.4 151.8Z\"/><path class=\"lp\" d=\"M180.0 477.7L174.6 461.1L166.8 448.6L149.0 436.8L115.8 424.6L96.6 422.7L81.0 428.5L92.9 453.7L99.4 461.4L130.1 468.7L142.8 479.0L153.3 490.0L185.3 490.0L180.0 477.7ZM61.6 -4.5L92.7 14.2L92.0 36.4L82.3 58.3L70.8 68.3L56.2 72.5L40.2 81.9L13.1 105.9L76.9 127.6L94.6 141.8L124.9 178.5L142.8 187.0L170.0 186.8L163.9 207.3L150.6 219.5L122.4 235.2L132.1 242.5L143.3 254.3L152.5 266.7L156.4 276.0L153.2 291.7L146.2 304.4L139.1 314.2L136.0 321.8L131.1 329.5L110.7 342.8L108.2 354.4L114.8 362.5L149.0 373.4L151.3 379.6L161.0 393.1L171.7 399.8L176.8 386.0L180.9 379.1L199.7 357.7L203.9 349.8L214.0 300.9L210.4 274.2L165.9 255.0L169.3 237.1L196.5 197.7L206.2 186.6L213.7 181.8L213.5 174.5L149.3 94.3L150.3 28.5L159.3 -20.0L56.7 -20.0L61.6 -4.5ZM67.4 151.8L18.6 138.9L5.7 133.5L-2.3 128.0L-7.9 122.4L-17.9 109.6L-19.1 100.9L-10.6 95.0L0.1 90.9L5.7 87.7L3.2 65.0L-2.6 43.4L-2.3 25.5L13.1 13.5L26.1 17.8L36.8 28.1L44.2 27.7L47.0 -0.8L37.4 -20.0L-20.0 -20.0L-20.0 149.5L67.4 151.8Z\"/><path class=\"lo\" d=\"M180.0 477.7L174.6 461.1L166.8 448.6L149.0 436.8L115.8 424.6L96.6 422.7L81.0 428.5L92.9 453.7L99.4 461.4L130.1 468.7L142.8 479.0L153.3 490.0L185.3 490.0L180.0 477.7ZM61.6 -4.5L92.7 14.2L92.0 36.4L82.3 58.3L70.8 68.3L56.2 72.5L40.2 81.9L13.1 105.9L76.9 127.6L94.6 141.8L124.9 178.5L142.8 187.0L170.0 186.8L163.9 207.3L150.6 219.5L122.4 235.2L132.1 242.5L143.3 254.3L152.5 266.7L156.4 276.0L153.2 291.7L146.2 304.4L139.1 314.2L136.0 321.8L131.1 329.5L110.7 342.8L108.2 354.4L114.8 362.5L149.0 373.4L151.3 379.6L161.0 393.1L171.7 399.8L176.8 386.0L180.9 379.1L199.7 357.7L203.9 349.8L214.0 300.9L210.4 274.2L165.9 255.0L169.3 237.1L196.5 197.7L206.2 186.6L213.7 181.8L213.5 174.5L149.3 94.3L150.3 28.5L159.3 -20.0L56.7 -20.0L61.6 -4.5ZM67.4 151.8L18.6 138.9L5.7 133.5L-2.3 128.0L-7.9 122.4L-17.9 109.6L-19.1 100.9L-10.6 95.0L0.1 90.9L5.7 87.7L3.2 65.0L-2.6 43.4L-2.3 25.5L13.1 13.5L26.1 17.8L36.8 28.1L44.2 27.7L47.0 -0.8L37.4 -20.0L-20.0 -20.0L-20.0 149.5L67.4 151.8Z\"/><circle class=\"pn1\" cx=\"150\" cy=\"235\" r=\"9\"/><circle class=\"pn2\" cx=\"150\" cy=\"235\" r=\"3\"/></svg>", "<svg viewBox=\"0 0 300 240\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-label=\"Map of the coast around Ses Illetes\" xmlns=\"http://www.w3.org/2000/svg\"><defs><pattern id=\"d3\" width=\"7\" height=\"7\" patternUnits=\"userSpaceOnUse\"><circle cx=\"3.5\" cy=\"3.5\" r=\"1.3\"/></pattern></defs><rect class=\"dt\" width=\"300\" height=\"240\" fill=\"url(#d3)\"/><path class=\"sh\" d=\"M89.5 179.3L83.4 189.5L81.8 195.0L81.8 213.7L86.0 225.4L81.2 252.8L82.3 260.0L142.0 260.0L145.3 256.5L162.7 231.1L186.4 214.0L195.8 219.0L252.8 256.4L256.8 258.3L261.2 259.0L301.1 259.8L320.0 256.0L320.0 166.7L313.3 164.0L305.9 164.7L265.6 182.6L228.8 163.0L175.9 86.6L175.2 81.5L171.9 75.2L168.9 71.8L163.6 68.9L159.1 68.1L151.3 69.0L147.0 70.3L143.1 72.9L140.2 76.4L138.3 80.6L134.6 102.0L129.3 110.0L124.9 107.0L120.3 105.7L115.6 105.8L111.1 107.3L106.2 111.2L90.8 129.1L82.6 142.9L81.0 148.9L81.5 153.6L83.2 157.9L89.4 166.3L93.4 169.5L89.5 179.3ZM121.0 -15.3L127.3 -16.7L132.0 -20.0L70.8 -20.0L75.2 -16.5L81.4 -14.7L121.0 -15.3Z\"/><path class=\"lt\" transform=\"translate(4 4)\" d=\"M311.0 179.9L265.0 200.4L217.9 175.3L161.0 93.2L159.9 89.7L159.9 86.1L158.5 84.1L153.8 84.8L149.8 108.1L138.3 125.3L126.5 130.4L118.3 121.6L103.8 138.4L97.0 149.7L101.3 155.6L109.8 160.8L109.3 172.7L103.9 186.4L97.8 196.5L97.8 212.1L102.6 223.5L97.2 254.0L113.6 259.1L132.1 247.4L151.1 219.7L185.1 195.1L204.0 205.2L261.6 243.0L301.4 243.8L320.0 239.6L320.0 191.3L311.0 179.9Z\"/><path class=\"lp\" d=\"M311.0 179.9L265.0 200.4L217.9 175.3L161.0 93.2L159.9 89.7L159.9 86.1L158.5 84.1L153.8 84.8L149.8 108.1L138.3 125.3L126.5 130.4L118.3 121.6L103.8 138.4L97.0 149.7L101.3 155.6L109.8 160.8L109.3 172.7L103.9 186.4L97.8 196.5L97.8 212.1L102.6 223.5L97.2 254.0L113.6 259.1L132.1 247.4L151.1 219.7L185.1 195.1L204.0 205.2L261.6 243.0L301.4 243.8L320.0 239.6L320.0 191.3L311.0 179.9Z\"/><path class=\"lo\" d=\"M311.0 179.9L265.0 200.4L217.9 175.3L161.0 93.2L159.9 89.7L159.9 86.1L158.5 84.1L153.8 84.8L149.8 108.1L138.3 125.3L126.5 130.4L118.3 121.6L103.8 138.4L97.0 149.7L101.3 155.6L109.8 160.8L109.3 172.7L103.9 186.4L97.8 196.5L97.8 212.1L102.6 223.5L97.2 254.0L113.6 259.1L132.1 247.4L151.1 219.7L185.1 195.1L204.0 205.2L261.6 243.0L301.4 243.8L320.0 239.6L320.0 191.3L311.0 179.9Z\"/><circle class=\"pn1\" cx=\"150\" cy=\"120\" r=\"9\"/><circle class=\"pn2\" cx=\"150\" cy=\"120\" r=\"3\"/></svg>", "<svg viewBox=\"0 0 600 230\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-label=\"Map of the coast around Kerama Islands\" xmlns=\"http://www.w3.org/2000/svg\"><defs><pattern id=\"d4\" width=\"7\" height=\"7\" patternUnits=\"userSpaceOnUse\"><circle cx=\"3.5\" cy=\"3.5\" r=\"1.3\"/></pattern></defs><rect class=\"dt\" width=\"600\" height=\"230\" fill=\"url(#d4)\"/><path class=\"sh\" d=\"M389.0 137.8L387.5 129.2L385.6 124.6L378.0 114.2L372.9 110.5L368.3 109.1L362.0 109.5L348.8 113.4L346.1 115.1L342.8 118.5L332.6 136.9L328.0 165.1L328.2 185.6L331.1 200.6L333.4 206.1L337.5 210.5L348.6 217.0L354.8 218.4L358.0 218.2L362.5 216.6L366.4 213.8L368.5 211.4L376.3 199.9L378.4 195.2L381.2 178.9L385.7 163.6L388.8 149.1L389.0 137.8Z\"/><path class=\"lt\" transform=\"translate(4 4)\" d=\"M373.0 138.0L371.8 132.7L366.1 125.0L355.9 127.7L347.7 142.2L344.0 165.9L344.1 183.7L346.8 197.5L355.2 202.4L363.0 190.9L365.6 175.3L370.1 160.3L373.1 145.8L373.0 138.0Z\"/><path class=\"lp\" d=\"M373.0 138.0L371.8 132.7L366.1 125.0L355.9 127.7L347.7 142.2L344.0 165.9L344.1 183.7L346.8 197.5L355.2 202.4L363.0 190.9L365.6 175.3L370.1 160.3L373.1 145.8L373.0 138.0Z\"/><path class=\"lo\" d=\"M373.0 138.0L371.8 132.7L366.1 125.0L355.9 127.7L347.7 142.2L344.0 165.9L344.1 183.7L346.8 197.5L355.2 202.4L363.0 190.9L365.6 175.3L370.1 160.3L373.1 145.8L373.0 138.0Z\"/><circle class=\"pn1\" cx=\"300\" cy=\"115\" r=\"9\"/><circle class=\"pn2\" cx=\"300\" cy=\"115\" r=\"3\"/></svg>", "<svg viewBox=\"0 0 300 470\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-label=\"Map of the coast around Cabo de Gata\" xmlns=\"http://www.w3.org/2000/svg\"><defs><pattern id=\"d5\" width=\"7\" height=\"7\" patternUnits=\"userSpaceOnUse\"><circle cx=\"3.5\" cy=\"3.5\" r=\"1.3\"/></pattern></defs><rect class=\"dt\" width=\"300\" height=\"470\" fill=\"url(#d5)\"/><path class=\"sh\" d=\"M300.4 60.4L320.0 58.5L320.0 -20.0L-20.0 -20.0L-20.0 175.2L-4.8 184.7L15.3 206.1L35.9 234.8L62.6 261.6L66.8 263.7L101.0 274.3L105.4 274.2L125.3 270.8L142.0 264.0L145.8 261.8L161.2 249.5L163.8 245.4L169.8 231.5L182.1 227.8L191.2 222.0L194.9 218.6L202.2 204.7L206.6 185.0L208.2 181.0L219.0 169.3L233.0 158.4L245.3 142.3L246.8 138.1L254.6 99.0L262.3 89.7L290.9 69.8L300.4 60.4Z\"/><path class=\"lt\" transform=\"translate(4 4)\" d=\"M320.0 41.3L320.0 -20.0L-20.0 -20.0L-20.0 156.4L5.4 172.2L27.7 196.0L48.2 224.5L71.6 248.4L103.0 258.4L119.3 256.0L136.0 249.2L149.1 239.1L157.7 219.2L165.5 215.9L174.8 213.5L182.5 208.5L186.9 200.0L191.2 180.2L194.5 172.2L208.2 157.4L221.3 147.5L231.1 135.0L239.7 91.9L251.3 77.8L280.7 57.5L291.1 47.1L296.2 44.7L315.0 43.3L320.0 41.3Z\"/><path class=\"lp\" d=\"M320.0 41.3L320.0 -20.0L-20.0 -20.0L-20.0 156.4L5.4 172.2L27.7 196.0L48.2 224.5L71.6 248.4L103.0 258.4L119.3 256.0L136.0 249.2L149.1 239.1L157.7 219.2L165.5 215.9L174.8 213.5L182.5 208.5L186.9 200.0L191.2 180.2L194.5 172.2L208.2 157.4L221.3 147.5L231.1 135.0L239.7 91.9L251.3 77.8L280.7 57.5L291.1 47.1L296.2 44.7L315.0 43.3L320.0 41.3Z\"/><path class=\"lo\" d=\"M320.0 41.3L320.0 -20.0L-20.0 -20.0L-20.0 156.4L5.4 172.2L27.7 196.0L48.2 224.5L71.6 248.4L103.0 258.4L119.3 256.0L136.0 249.2L149.1 239.1L157.7 219.2L165.5 215.9L174.8 213.5L182.5 208.5L186.9 200.0L191.2 180.2L194.5 172.2L208.2 157.4L221.3 147.5L231.1 135.0L239.7 91.9L251.3 77.8L280.7 57.5L291.1 47.1L296.2 44.7L315.0 43.3L320.0 41.3Z\"/><circle class=\"pn1\" cx=\"150\" cy=\"235\" r=\"9\"/><circle class=\"pn2\" cx=\"150\" cy=\"235\" r=\"3\"/></svg>", "<svg viewBox=\"0 0 300 470\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-label=\"Map of the coast around Le Morne\" xmlns=\"http://www.w3.org/2000/svg\"><defs><pattern id=\"d6\" width=\"7\" height=\"7\" patternUnits=\"userSpaceOnUse\"><circle cx=\"3.5\" cy=\"3.5\" r=\"1.3\"/></pattern></defs><rect class=\"dt\" width=\"300\" height=\"470\" fill=\"url(#d6)\"/><path class=\"sh\" d=\"M222.1 35.0L208.6 78.7L207.9 83.3L209.0 89.3L212.3 94.5L216.0 97.4L228.0 104.2L229.0 113.0L220.5 161.7L214.0 176.5L201.4 179.0L160.9 170.6L154.8 170.5L121.0 183.8L117.4 187.0L115.0 191.0L114.0 194.1L113.8 198.9L123.4 230.1L147.6 258.9L250.4 352.2L255.7 355.3L263.3 356.2L267.8 354.9L301.0 339.7L320.0 341.9L320.0 -20.0L223.0 -20.0L222.1 35.0Z\"/><path class=\"lt\" transform=\"translate(4 4)\" d=\"M238.1 37.5L223.9 83.4L243.1 94.3L245.1 113.6L235.9 166.3L225.3 190.7L201.2 195.3L157.7 186.2L129.7 197.3L137.4 222.3L159.8 248.5L261.2 340.3L298.4 323.3L320.0 325.8L320.0 -20.0L239.0 -20.0L238.1 37.5Z\"/><path class=\"lp\" d=\"M238.1 37.5L223.9 83.4L243.1 94.3L245.1 113.6L235.9 166.3L225.3 190.7L201.2 195.3L157.7 186.2L129.7 197.3L137.4 222.3L159.8 248.5L261.2 340.3L298.4 323.3L320.0 325.8L320.0 -20.0L239.0 -20.0L238.1 37.5Z\"/><path class=\"lo\" d=\"M238.1 37.5L223.9 83.4L243.1 94.3L245.1 113.6L235.9 166.3L225.3 190.7L201.2 195.3L157.7 186.2L129.7 197.3L137.4 222.3L159.8 248.5L261.2 340.3L298.4 323.3L320.0 325.8L320.0 -20.0L239.0 -20.0L238.1 37.5Z\"/><circle class=\"pn1\" cx=\"150\" cy=\"235\" r=\"9\"/><circle class=\"pn2\" cx=\"150\" cy=\"235\" r=\"3\"/></svg>", "<svg viewBox=\"0 0 600 230\" preserveAspectRatio=\"xMidYMid slice\" role=\"img\" aria-label=\"Map of the coast around Santa Maria\" xmlns=\"http://www.w3.org/2000/svg\"><defs><pattern id=\"d7\" width=\"7\" height=\"7\" patternUnits=\"userSpaceOnUse\"><circle cx=\"3.5\" cy=\"3.5\" r=\"1.3\"/></pattern></defs><rect class=\"dt\" width=\"600\" height=\"230\" fill=\"url(#d7)\"/><path class=\"sh\" d=\"M229.8 0.5L226.6 21.0L227.8 37.5L231.2 50.2L234.0 55.8L237.5 59.1L240.2 60.6L243.2 61.6L247.9 61.9L254.9 59.7L257.8 65.8L266.4 121.7L268.6 127.7L271.7 131.3L275.7 133.9L280.3 135.2L283.5 135.2L288.2 134.1L297.1 129.6L303.7 127.2L311.4 122.9L313.9 120.9L319.8 113.5L322.7 107.9L323.2 104.7L322.9 100.0L319.5 92.9L323.2 89.8L325.1 87.2L327.9 79.9L332.3 54.9L333.3 44.6L332.5 37.9L329.0 30.6L317.7 18.9L316.3 9.3L317.6 -20.0L221.4 -20.0L223.2 -11.0L229.8 0.5Z\"/><path class=\"lt\" transform=\"translate(4 4)\" d=\"M238.1 -16.8L242.9 -9.5L251.6 -6.8L251.6 -1.6L244.9 6.0L242.6 19.9L243.6 34.9L246.7 46.0L262.1 38.0L273.3 61.0L282.2 119.3L302.4 109.7L307.3 103.6L306.0 102.4L304.1 97.6L302.6 91.9L302.3 87.8L304.6 84.0L311.3 79.0L312.8 74.8L313.5 66.9L316.6 51.7L317.4 43.2L315.3 38.8L305.6 29.7L302.3 24.6L300.3 10.1L301.6 -20.0L237.6 -20.0L238.1 -16.8Z\"/><path class=\"lp\" d=\"M238.1 -16.8L242.9 -9.5L251.6 -6.8L251.6 -1.6L244.9 6.0L242.6 19.9L243.6 34.9L246.7 46.0L262.1 38.0L273.3 61.0L282.2 119.3L302.4 109.7L307.3 103.6L306.0 102.4L304.1 97.6L302.6 91.9L302.3 87.8L304.6 84.0L311.3 79.0L312.8 74.8L313.5 66.9L316.6 51.7L317.4 43.2L315.3 38.8L305.6 29.7L302.3 24.6L300.3 10.1L301.6 -20.0L237.6 -20.0L238.1 -16.8Z\"/><path class=\"lo\" d=\"M238.1 -16.8L242.9 -9.5L251.6 -6.8L251.6 -1.6L244.9 6.0L242.6 19.9L243.6 34.9L246.7 46.0L262.1 38.0L273.3 61.0L282.2 119.3L302.4 109.7L307.3 103.6L306.0 102.4L304.1 97.6L302.6 91.9L302.3 87.8L304.6 84.0L311.3 79.0L312.8 74.8L313.5 66.9L316.6 51.7L317.4 43.2L315.3 38.8L305.6 29.7L302.3 24.6L300.3 10.1L301.6 -20.0L237.6 -20.0L238.1 -16.8Z\"/><circle class=\"pn1\" cx=\"300\" cy=\"115\" r=\"9\"/><circle class=\"pn2\" cx=\"300\" cy=\"115\" r=\"3\"/></svg>"];
+  var B=document.getElementById("bento");
+  B.innerHTML=P.map(function(p,i){return '<button class="tile '+p[0]+'" data-i="'+i+'" aria-label="Open details for '+p[1]+'"><div class="m">'+MAPS[i]+'</div><span class="rg">'+p[2]+'</span><span class="pl" aria-hidden="true">+</span><span class="nm">'+p[1]+'</span></button>'}).join("");
+  var sp=document.getElementById("spot"),spb=document.getElementById("spb");
+  B.addEventListener("click",function(e){var t=e.target.closest(".tile");if(!t)return;var p=P[+t.dataset.i];
+    spb.innerHTML='<div class="dm"><div class="m">'+MAPS[+t.dataset.i]+'</div></div><h2>'+p[1]+'</h2><div class="reg2">'+p[2]+'</div><p>'+p[3]+'</p><dl><dt>Coordinates</dt><dd>'+p[4]+'</dd><dt>Light</dt><dd>'+p[5]+'</dd><dt>Season</dt><dd>'+p[6]+'</dd></dl>';
+    if(sp.showModal)sp.showModal()});
+
+  var KEY="inkpin_consent",cc=document.getElementById("cc");
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments)}
+  gtag("consent","default",{ad_storage:"denied",analytics_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",wait_for_update:500});
+  function read(){try{return JSON.parse(localStorage.getItem(KEY))}catch(e){return null}}
+  function write(v){try{localStorage.setItem(KEY,JSON.stringify(v))}catch(e){}}
+  function apply(v){
+    gtag("consent","update",{analytics_storage:v.an?"granted":"denied",ad_storage:v.ad?"granted":"denied",ad_user_data:v.ad?"granted":"denied",ad_personalization:v.ad?"granted":"denied"});
+    // Load Google tags here ONLY when v.an or v.ad is true (add your own tag ID).
+  }
+  function choose(an,ad){var v={an:an,ad:ad,t:Date.now()};write(v);apply(v);cc.close()}
+  function show(){var v=read()||{};document.getElementById("c-an").checked=!!v.an;document.getElementById("c-ad").checked=!!v.ad;if(cc.showModal&&!cc.open)cc.showModal()}
+  var s=read();if(s){apply(s)}else{show()}
+  cc.addEventListener("cancel",function(){write({an:false,ad:false,t:Date.now()});apply({an:false,ad:false})});
+  document.getElementById("cc-all").onclick=function(){choose(true,true)};
+  document.getElementById("cc-none").onclick=function(){choose(false,false)};
+  document.getElementById("cc-cust").onclick=function(){document.getElementById("prefs").classList.add("open");this.style.display="none";document.getElementById("cc-save").style.display="inline-block"};
+  document.getElementById("cc-save").onclick=function(){choose(document.getElementById("c-an").checked,document.getElementById("c-ad").checked)};
+  document.getElementById("cc-reopen").onclick=show;
+  document.querySelectorAll("[data-open]").forEach(function(b){b.onclick=function(){var d=document.getElementById(b.dataset.open);if(d.showModal)d.showModal()}});
+  document.querySelectorAll("[data-close]").forEach(function(b){b.onclick=function(){b.closest("dialog").close()}});
+  document.querySelectorAll("dialog:not(#cc)").forEach(function(d){d.addEventListener("click",function(e){if(e.target===d)d.close()})});
+})();
+</script>
+</body>
+</html>
