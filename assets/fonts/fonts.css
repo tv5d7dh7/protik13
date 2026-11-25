@@ -1,0 +1,5 @@
+/* Self-hosted latin subsets — Bodoni Moda (display) + Outfit (UI) */
+@font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:500 600;font-display:swap;src:url("bodoni-moda-normal-500.woff2") format("woff2")}
+@font-face{font-family:"Bodoni Moda";font-style:italic;font-weight:500;font-display:swap;src:url("bodoni-moda-italic-500.woff2") format("woff2")}
+@font-face{font-family:"Outfit";font-style:normal;font-weight:300 500;font-display:swap;src:url("outfit-normal-300.woff2") format("woff2")}
+@font-face{font-family:"Outfit";font-style:normal;font-weight:600;font-display:swap;src:url("outfit-normal-600.woff2") format("woff2")}
